@@ -118,6 +118,126 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .setting-box {
+    width: 100%;
+    left: -100%;
+  }
+}
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .setting-box {
+    width: 100%;
+    left: -100%;
+  }
+  
+  .setting-box.open {
+    left: 0;
+  }
+
+  .setting-box .toggle-settings {
+    right: 0;
+    top: 20px;
+  }
+  
+  .setting-container .option-box {
+    padding: 10px;
+  }
+
+  .setting-container .option-box h4 {
+    font-size: 12px;
+  }
+
+  .setting-box .option-box li {
+    width: 15px;
+    height: 15px;
+  }
+
+  .setting-box .option-box .yes,
+  .setting-box .option-box .no {
+    width: 40px;
+    font-size: 10px;
+  }
+
+  .button-reset {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+/* Additional breakpoints for better support */
+@media (max-width: 1024px) {
+  .setting-box {
+    width: 250px;
+    left: -250px;
+  }
+
+  .setting-box.open {
+    left: 0;
+  }
+
+  .setting-box .toggle-settings {
+    right: -40px;
+    top: 80px;
+  }
+
+  .setting-container .option-box {
+    padding: 15px;
+  }
+
+  .setting-container .option-box h4 {
+    font-size: 13px;
+  }
+
+  .setting-box .option-box li {
+    width: 18px;
+    height: 18px;
+  }
+
+  .setting-box .option-box .yes,
+  .setting-box .option-box .no {
+    width: 45px;
+    font-size: 11px;
+  }
+
+  .button-reset {
+    width: 85%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .setting-box .toggle-settings {
+    right: 0;
+    top: 10px;
+  }
+
+  .setting-container .option-box {
+    padding: 8px;
+  }
+
+  .setting-container .option-box h4 {
+    font-size: 10px;
+  }
+
+  .setting-box .option-box li {
+    width: 12px;
+    height: 12px;
+  }
+
+  .setting-box .option-box .yes,
+  .setting-box .option-box .no {
+    width: 35px;
+    font-size: 9px;
+  }
+
+  .button-reset {
+    width: 95%;
+    padding: 8px;
+  }
+}
 /* -------------------------- *\
 
      Design ** Landing-Page 
@@ -668,7 +788,7 @@ footer .content .rightbox input[type="email"] {
 }
 footer .content .rightbox input[type="submit"] {
   height: 42px;
-  width: 100%;
+  width: 105%;
   font-size: 18px;
   color: #d9d9d9;
   background: #eb2f06;
@@ -710,29 +830,108 @@ footer a {
 footer a:hover {
   color: var(--main-color);
 }
-@media (max-width: 950px) {
-  footer .contect .leftbox {
-    width: 50%;
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  footer .content .leftbox, 
+  footer .content .middlebox, 
+  footer .content .rightbox {
+    width: 48%;
+    padding-left: 0;
   }
-  footer .contect .righttbox {
-    margin-top: 40px;
+
+  footer .content .middlebox {
+    padding-left: 40px;
+  }
+
+  footer .content .middlebox a {
+    line-height: 28px;
+  }
+
+  footer .content .rightbox input[type="email"],
+  footer .content .rightbox input[type="submit"] {
+    height: 40px;
+    font-size: 16px;
+  }
+
+  footer .content .media-icon a {
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+  }
+
+  footer .bottom {
+    text-align: center;
+    padding: 0 10px 5px 10px;
   }
 }
-@media (max-width: 1100px) {
-  footer .contect .middlebox {
-    padding-left: 50px;
-  }
-}
-@media (max-width: 560px) {
-  footer {
-    position: relative;
-  }
-  footer .content .leftbox {
+
+@media (max-width: 767px) {
+  footer .content .leftbox, 
+  footer .content .middlebox, 
+  footer .content .rightbox {
     width: 100%;
-    margin-top: 30px;
+    padding-left: 0;
+    margin-bottom: 20px;
   }
+
   footer .content .middlebox {
     padding-left: 0;
+  }
+
+  footer .content .middlebox a {
+    line-height: 26px;
+  }
+
+  footer .content .rightbox input[type="email"],
+  footer .content .rightbox input[type="submit"] {
+    height: 38px;
+    font-size: 14px;
+  }
+
+  footer .content .media-icon a {
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+  }
+
+  footer .bottom {
+    text-align: center;
+    padding: 0 5px 5px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .content .topic {
+    font-size: 18px;
+  }
+
+  footer .content .leftbox, 
+  footer .content .middlebox, 
+  footer .content .rightbox {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  footer .content .middlebox a {
+    line-height: 24px;
+  }
+
+  footer .content .rightbox input[type="email"],
+  footer .content .rightbox input[type="submit"] {
+    height: 35px;
+    font-size: 12px;
+  }
+
+  footer .content .media-icon a {
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+  }
+
+  footer .bottom {
+    text-align: center;
+    padding: 0 5px 5px 5px;
   }
 }
 /* End Footer */
